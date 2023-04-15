@@ -1,0 +1,25 @@
+
+
+/*פאיכ-טחמבנ*/
+.holder1 {
+    height: 300px;
+    width: 300px;
+    border: 2px solid black;
+}
+
+.img1 {
+    max-width: 300px;
+    max-height: 300px;
+    min-width: 300px;
+    min-height: 300px;
+}
+
+input[type="file"] {
+    margin-top: 5px;
+}
+
+.heading1 {
+    font-family: Montserrat;
+    font-size: 45px;
+    color: green;
+}

@@ -1,0 +1,190 @@
+﻿ <link rel="stylesheet" href="~/include/css/linearicons.css">
+            <link rel="stylesheet" href="~/include/css/font-awesome.min.css">
+            <link rel="stylesheet" href="~/include/css/bootstrap.css">
+            <link rel="stylesheet" href="~/include/css/magnific-popup.css">
+            <link rel="stylesheet" href="~/include/css/nice-select.css">							
+            <link rel="stylesheet" href="~/include/css/animate.min.css">
+            <link rel="stylesheet" href="~/include/css/owl.carousel.css">			
+            <link rel="stylesheet" href="~/include/css/jquery-ui.css">			
+            <link rel="stylesheet" href="~/include/css/main.css">
+            <link rel="stylesheet" href="~/include/css/main.css"> 
+
+<link rel="stylesheet" href="~/css/vkladki.css">
+<link rel="stylesheet" href="~/css/img-file.css">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">   @*для файл-изобр*@
+ 
+
+
+
+            <!-- start banner Area -->
+            <section class="banner-area relative about-banner" id="home">	
+                <div class="overlay overlay-bg"></div>
+                <div class="container">				
+                    <div class="row d-flex align-items-center justify-content-center">
+                        <div class="about-content col-lg-12">
+                            <h1 class="text-white">
+                                   МАЪЛУМОТ ДОХИЛКУНӢ
+                            </h1>
+                        </div>	
+                    </div>
+                </div>
+            </section>
+            <!-- End banner Area -->	
+
+
+            <section class="section">
+  <div class="container">
+    <div class="section__tabs tabs font">
+      <div class="tabs__head">
+
+ 
+        <div class="tabs__caption" data-tab="davlat">ДАВЛАТ</div>
+        <div class="tabs__caption" data-tab="poytaht">ПОЙТАХТ</div>
+        <div class="tabs__caption" data-tab="tashkilot">ТАШКИЛОТ</div>
+        <div class="tabs__caption" data-tab="bahr">БАҲР</div>
+        <div class="tabs__caption" data-tab="daryo">ДАРЁ</div>
+        <div class="tabs__caption" data-tab="kul">КӮЛ</div>
+        <div class="tabs__caption" data-tab="kuh">КӮҲ</div>
+
+
+      </div>
+      <div class="tabs__body font">
+
+        <div class="tabs__content" data-tab="davlat">
+
+            <div class="container">
+<div class="row">
+      <div class="col">
+      <table>
+                 @foreach( string nom in @ViewBag.Davlat.Split(','))   
+                {
+                    <tr><td>@nom</td><td><input type="text"></td></tr>
+                }
+      </table>
+      </div>
+
+      <div class="col">
+       <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+        </script>
+
+        <form>
+            <div class="holder1">
+                <img class="img1" id="imgPreview" src="#" alt="pic" />
+            </div>
+            <input type="file" name="photograph"
+                   id="photo" required="true" />
+        </form>
+           </div>
+
+      @* <div class="col">
+       <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+        </script>
+
+        <form>
+            <div class="holder1">
+                <img class="img1" id="imgPreview" src="#" alt="pic" />
+            </div>
+            <input type="file" name="photograph"
+                   id="photo" required="true" />
+        </form>
+           </div>*@
+        <a asp-action="Index" asp-controller="Home">Сабт</a>
+
+  </div>
+        </div>
+        </div>
+                
+        <div class="tabs__content" data-tab="poytaht">
+                    <div class="container">
+                        <div class="row">
+            <table>
+                 @foreach( string nom in @ViewBag.Poytaht.Split(','))   
+                {
+                    <tr><td>@nom</td><td><input type="text"></td></tr>
+                }
+            </table>
+
+                    @*<div class="col">
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+                        </script>
+
+                        <form>
+                            <div class="holder1">
+                                <img class="img1" id="imgPreview" src="#" alt="pic" />
+                            </div>
+                            <input type="file" name="photograph"
+                                   id="photo" required="true" />
+                        </form>
+                    </div>
+*@
+
+        </div>
+                        <a asp-action="Index" asp-controller="Home" class="text-uppercase primary-btn mx-auto mt-40">Сабт</a>
+
+                    </div>
+                </div>
+        <div class="tabs__content" data-tab="tashkilot">
+            <table>
+                 @foreach( string nom in @ViewBag.Tashkilot.Split(','))   
+                {
+                    <tr><td>@nom</td><td><input type="text"></td></tr>
+                }
+            </table>
+                    <a asp-action="Index" asp-controller="Home" class="text-uppercase primary-btn mx-auto mt-40">Сабт</a>
+
+        </div>
+        <div class="tabs__content" data-tab="bahr">
+            <table>
+                 @foreach( string nom in @ViewBag.Bahr.Split(','))   
+                {
+                    <tr><td>@nom</td><td><input type="text"></td></tr>
+                }
+            </table>
+                    <a asp-action="Index" asp-controller="Home" class="text-uppercase primary-btn mx-auto mt-40">Сабт</a>
+
+        </div>
+        <div class="tabs__content" data-tab="daryo">
+            <table>
+                 @foreach( string nom in @ViewBag.Daryo.Split(','))   
+                {
+                    <tr><td>@nom</td><td><input type="text"></td></tr>
+                }
+            </table>
+                    <a asp-action="Index" asp-controller="Home" class="text-uppercase primary-btn mx-auto mt-40">Сабт</a>
+
+        </div>
+        <div class="tabs__content" data-tab="kul">
+             <table>
+                 @foreach( string nom in @ViewBag.Kul.Split(','))   
+                {
+                    <tr><td>@nom</td><td><input type="text"></td></tr>
+                }
+            </table>
+                    <a asp-action="Index" asp-controller="Home" class="text-uppercase primary-btn mx-auto mt-40">Сабт</a>
+
+        </div>
+        <div class="tabs__content" data-tab="kuh">
+             <table>
+                 @foreach( string nom in @ViewBag.Kuh.Split(','))   
+                {
+                    <tr><td>@nom</td><td><input type="text"></td></tr>
+                }
+            </table>
+                    <a asp-action="Index" asp-controller="Home" class="text-uppercase primary-btn mx-auto mt-40">Сабт</a>
+
+        </div>
+
+    </div>
+    </div>
+  </div>
+</section>
+
+
+    <script src="~/js/vkladki.js"></script>
+    
+    <script src="~/js/img-file.js"></script>
+

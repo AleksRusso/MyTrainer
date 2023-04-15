@@ -1,0 +1,106 @@
+﻿@using MyTrainer.Models
+@model IEnumerable<Davlat>
+
+
+           
+
+            <link rel="stylesheet" href="~/include/css/linearicons.css">
+            <link rel="stylesheet" href="~/include/css/font-awesome.min.css">
+            <link rel="stylesheet" href="~/include/css/bootstrap.css">
+            <link rel="stylesheet" href="~/include/css/magnific-popup.css">
+            <link rel="stylesheet" href="~/include/css/nice-select.css">							
+            <link rel="stylesheet" href="~/include/css/animate.min.css">
+            <link rel="stylesheet" href="~/include/css/owl.carousel.css">			
+            <link rel="stylesheet" href="~/include/css/jquery-ui.css">			
+            <link rel="stylesheet" href="~/include/css/main.css">
+            <link rel="shortcut icon" href="~/include/img/fav.png">
+
+
+            <!-- start banner Area -->
+            <section class="banner-area relative about-banner" id="home">	
+                <div class="overlay overlay-bg"></div>
+                <div class="container">				
+                    <div class="row d-flex align-items-center justify-content-center">
+                        <div class="about-content col-lg-12">
+                            <h1 class="text-white">
+                                ПОЙТАХТ				
+                            </h1>
+                <p class="text-white link-nav"><a class="nav-link font" asp-action="Index" asp-controller="Home">Асосӣ</a>  <span class="lnr lnr-arrow-right"></span>  <a class="nav-link font" asp-action="About" asp-controller="Home">Дар бораи МО</a></p>
+
+                        </div>	
+                    </div>
+                </div>
+            </section>
+            <!-- End banner Area -->	
+
+            @for(int j=0;j<4;j++)
+{
+            <!-- Start popular-course Area -->
+            <section class="popular-course-area">
+                <div class="container">
+                    <div class="row d-flex justify-content-center">
+                        <div class="menu-content pb-70 col-lg-8">
+                            <div class="title text-center">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>						
+                    <div class="row">
+                        <div class="active-popular-carusel">
+
+
+                           @foreach(var i in Model)
+                           { <div class="single-popular-carusel">
+                                <div class="thumb-wrap relative">
+                                    <div class="thumb relative">
+                                        <div class="overlay overlay-bg"></div>	
+                                        <img class="img-fluid" src="~/images/@i.image" alt="">
+@*                                        <input type="hidden" name="hidden_id" value="@i.id"></input>
+*@                                    </div>
+                                  @*<div class="meta d-flex justify-content-between">
+                                        <p><span class="lnr lnr-users"></span> 355 <span class="lnr lnr-bubble"></span>35</p>
+                                        <h4>$150</h4>
+                                    </div>	*@								
+                                </div>
+                                <div class="details">
+                                    <a class="nav-link" asp-action="State" asp-route-id=@i.id asp-controller="Home">
+                                        <h4>
+                                           @i.nom
+                                        </h4>
+                                    </a>
+                        @*<p>
+                            When television was young, there was a hugely popular show based on the still popular fictional characte										
+                            </p>*@
+                                </div>
+                            </div>	
+                            }
+
+                        </div>
+                    </div>
+                </div>	
+            </section>
+            <!-- End popular-course Area -->
+            <p></p>}
+
+
+
+
+
+
+
+
+            <script src="~/include/js/vendor/jquery-2.2.4.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.~/include/js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="~/include/js/vendor/bootstrap.min.js"></script>			
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+            <script src="~/include/js/easing.min.js"></script>			
+            <script src="~/include/js/hoverIntent.js"></script>
+            <script src="~/include/js/superfish.min.js"></script>	
+            <script src="~/include/js/jquery.ajaxchimp.min.js"></script>
+            <script src="~/include/js/jquery.magnific-popup.min.js"></script>	
+            <script src="~/include/js/jquery.tabs.min.js"></script>						
+            <script src="~/include/js/jquery.nice-select.min.js"></script>	
+            <script src="~/include/js/owl.carousel.min.js"></script>									
+            <script src="~/include/js/mail-script.js"></script>	
+            <script src="~/include/js/main.js"></script>	
+

@@ -1,0 +1,155 @@
+body {
+    background: #4169e1
+}
+
+.container {
+    max-width: 3140px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.tabs {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.tabs__head {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.tabs__caption {
+    flex: 1;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 8px 30px;
+    font-size: 22px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: var(--color);
+    opacity: 0.6;
+    background: var(--primary);
+    transition: 0.25s;
+}
+
+    .tabs__caption:hover {
+        opacity: 0.8;
+    }
+
+.tabs__caption_active {
+    opacity: 1;
+    background: var(--primary);
+}
+
+.tabs__body {
+    background: var(--primary);
+    position: relative;
+    top: -2px;
+    transition: 0.25s;
+}
+
+.tabs__content {
+    display: none;
+    padding: 30px;
+    color: var(--color);
+    transform: scaleY(0.8);
+    opacity: 0;
+    transform-origin: center top;
+    -webkit-animation: showContent 0.6s forwards;
+    animation: showContent 0.6s forwards;
+}
+
+.tabs__content_active {
+    display: block;
+}
+
+.section {
+    --primary: url(../images/fon-2.jpg) ;
+    --color: #fff;
+    padding: 15px 0;
+}
+/*
+.about {
+    padding: 15px 0;
+    --primary: #8cff98;
+    --color: #121212;
+}*/
+
+@-webkit-keyframes showContent {
+    0% {
+        transform: scaleY(0.8);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+@keyframes showContent {
+    0% {
+        transform: scaleY(0.8);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+
+
+.font{
+    font-family: 'Palatino Linotype';
+    font-size: 20px;
+}
+/*text*/
+input[type=text] {
+    
+    border: 2px solid #aaa;
+    border-radius: 5px;
+    margin: 4px 0;
+    outline: none;
+    padding: 2px;
+    box-sizing: border-box;
+    transition: .3s;
+    color: darkblue;
+}
+
+    input[type=text]:focus {
+        border-color: dodgerBlue;
+        box-shadow: 0 0 8px 0 dodgerBlue;
+    }
+
+
+
+
+    /*פאיכ-טחמבנ*/
+/*.holder1 {
+    height: 300px;
+    width: 300px;
+    border: 2px solid black;
+}
+
+.img1 {
+    max-width: 600px;
+    max-height: 600px;
+    min-width: 600px;
+    min-height: 600px;
+}
+
+input[type="file"] {
+    margin-top: 5px;
+}
+
+.heading1 {
+    font-family: Montserrat;
+    font-size: 45px;
+    color: green;
+}*/
