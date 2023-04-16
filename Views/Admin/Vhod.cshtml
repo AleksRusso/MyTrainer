@@ -12,6 +12,7 @@
 
 <link rel="stylesheet" href="~/css/avtoriz.css">
 
+@model MyTrainer.Models.RegisterModel
 
 <!-- start banner Area -->
             <section class="banner-area relative about-banner" id="home">	
@@ -37,15 +38,15 @@
             <input id="tab-2" type="radio" name="tab" class="sign-up">
             <label for="tab-2" class="tab">Регистратсия</label>
             <div class="login-form">
-            <form class="sign-in-htm">
+            <form asp-action="Login" asp-controller="Admin" class="sign-in-htm">
                 @*method="post" action="~/Home/Dohilkuni"*@
                     <div class="group">
-                        <label for="email" class="label">Адреси эллектронӣ</label>
-                        <input id="email" name="email" type="email" class="input">
+                        <label asp-for="Email" class="label">Адреси эллектронӣ</label>
+                        <input id="email" asp-for="Email" type="email" class="input">
                     </div>
                     <div class="group">
-                        <label for="pass" class="label">Парол</label>
-                        <input id="pass" name="password" type="password" class="input" data-type="password">
+                    <label asp-for="Password" class="label">Парол</label>
+                    <input id="pass" asp-for="Password" type="password" class="input" data-type="password">
                     </div>
                     <div class="group">
                         <input type="hidden" name="isPermanent" value="0">
@@ -54,36 +55,38 @@
                     </div>
                     <div class="group">
 
-                    <input type="submit" class="button" value="Дохилшавӣ" onclick="top.location.href='/Home/Dohilkuni';"/>
-                  
+                    <input type="submit" class="button" value="Дохилшавӣ" />
+                    @*onclick="top.location.href='/Home/Dohilkuni';"*@
                     </div>
                     <output class="error-message"></output>
                 </form>
-                <form class="sign-up-htm">
+
+
+            <form asp-action="Register" asp-controller="Admin"  class="sign-up-htm">
                     <div class="group">
-                        <label for="email" class="label">Адреси электронӣ</label>
-                        <input id="email" name="email" type="email" class="input">
+                        <label asp-for="Email" class="label">Адреси электронӣ</label>
+                        <input id="email" asp-for="Email" type="email" class="input">
                     </div>
                     <div class="group">
-                        <label for="pass" class="label">Парол</label>
-                        <input id="pass" name="password" type="password" class="input" data-type="password">
+                        <label asp-for="Password" class="label">Парол</label>
+                    <input id="pass" asp-for="Password" type="password" class="input" data-type="password">
                     </div>
                     <div class="group">
-                        <label for="pass" class="label">Такрори парол</label>
-                        <input id="pass" name="passwordcopy" type="password" class="input" data-type="password">
+                    <label asp-for="ConfirmPassword" class="label">Такрори парол</label>
+                    <input  asp-for="ConfirmPassword" type="password" class="input" data-type="password">
                     </div>
                     <div class="group">
-                        <label for="pass" class="label">Ном</label>
-                        <input id="pass" name="name" type="text" class="input">
+                        <label asp-for="Name" class="label">Ном</label>
+                        <input  asp-for="Name" type="text" class="input">
                     </div>
                     <div class="group">
-                    <input type="submit" class="button" value="Регистратсия" onclick="top.location.href='/Home/Dohilkuni';" />
+                    <input type="submit" class="button" value="Регистратсия"  />
 
                     </div>
                     <output class="error-message"></output>
                     <div class="hr"></div>
                     <div class="foot-lnk">
-                        <label for="tab-1">Пештар ба қайд гирифта шудаед?</a>
+                        <a for="tab-1">Пештар ба қайд гирифта шудаед?</a>
                     </div>
                 </form>
             </div>

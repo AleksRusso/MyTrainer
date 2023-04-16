@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MyTrainer.Models;
+using System.Data;
 using System.Diagnostics;
 
 namespace MyTrainer.Controllers
@@ -102,31 +104,38 @@ namespace MyTrainer.Controllers
         }
 
 
+        [Authorize(Roles = "admin")]
+        public IActionResult Dohilkuni()
+        {
+            return View();
+        }
+
+
         //[HttpGet]
         //public IActionResult Dohilkuni()
         //{
         //    return View();
         //}
         //////[HttpPost]
-        public IActionResult Dohilkuni()
-        {
-            //if (email == "aleksrusso.wizard@gmail.com" && password == "123456")
-            //{
-            //    string email, string password
-                ViewBag.Davlat = "НОМ,ПОЙТАХТ,МАСОХАТ,АХОЛӢ,ЗАБОН,АСЪОР";
-                ViewBag.Poytaht = "НОМ, ПОЙТАХТИ ДАВЛАТИ, МАСОҲАТ, АҲОЛӢ, ЗАБОН, АСЪОР";
-                ViewBag.Tashkilot = "НОМ, Дар бар мегирад, Қабул шуд, ШТАБ, ЗАБОН";
-                ViewBag.Bahr = "НОМ, Ҷойгиршавӣ, МАСОҲАТ, Ҷуқурӣ";
-                ViewBag.Daryo = "НОМ,Ҷойгиршавӣ , Дарозӣ , Баландӣ";
-                ViewBag.Kul = "НОМ, МАСОҲАТ, Дарозӣ, Ҷуқурӣ, Намакӣ,Ҷойгиршавӣ ";
-                ViewBag.Kuh = "НОМ,Ҷойгиршавӣ, Баландӣ";
+        //public IActionResult Dohilkuni()
+        //{
+        //    //if (email == "aleksrusso.wizard@gmail.com" && password == "123456")
+        //    //{
+        //    //    string email, string password
+        //        ViewBag.Davlat = "НОМ,ПОЙТАХТ,МАСОХАТ,АХОЛӢ,ЗАБОН,АСЪОР";
+        //        ViewBag.Poytaht = "НОМ, ПОЙТАХТИ ДАВЛАТИ, МАСОҲАТ, АҲОЛӢ, ЗАБОН, АСЪОР";
+        //        ViewBag.Tashkilot = "НОМ, Дар бар мегирад, Қабул шуд, ШТАБ, ЗАБОН";
+        //        ViewBag.Bahr = "НОМ, Ҷойгиршавӣ, МАСОҲАТ, Ҷуқурӣ";
+        //        ViewBag.Daryo = "НОМ,Ҷойгиршавӣ , Дарозӣ , Баландӣ";
+        //        ViewBag.Kul = "НОМ, МАСОҲАТ, Дарозӣ, Ҷуқурӣ, Намакӣ,Ҷойгиршавӣ ";
+        //        ViewBag.Kuh = "НОМ,Ҷойгиршавӣ, Баландӣ";
 
-                return View();
-            ////}
-            ////else { return View(null); }
-        }
+        //        return View();
+        //    ////}
+        //    ////else { return View(null); }
+        //}
 
-
+        [Authorize(Roles = "admin")]
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

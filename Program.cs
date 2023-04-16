@@ -1,7 +1,20 @@
+using MyTrainer.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<ApplicationContext>(options => options.UseMySql("server=127.0.0.1;port=3306;user=root;password=;database=mytrainerdb", new MySqlServerVersion(new Version(10, 4, 14))));
+
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(options =>
+                {
+                    options.LoginPath = new PathString("/Account/Login");
+                    options.AccessDeniedPath = new PathString("/Account/Login");
+                });
 
 var app = builder.Build();
 
